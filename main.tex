@@ -1,0 +1,51 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{ctex}
+\setlength{\parindent}{0pt}
+
+\title{通读笔记——\emph{TAOBench: an end-to-end benchmark for social network workloads}}
+\author{2112233093 黄卓}
+\begin{document}
+\maketitle
+\section{论文信息}
+\textbf{会议名：}VLDB会议\\
+\textbf{会议级别：}CCFA\\
+\textbf{会议track：}Volume15,issue9\\
+\textbf{发表年份：}2022\\
+\textbf{标题：}TAOBench: an end-to-end benchmark for social network workloads\\
+\textbf{作者及工作单位：}
+\begin{itemize}
+\item Audrey Cheng (UC Berkeley)
+  \item Xiao Shi (Facebook, Inc.)
+  \item Aaron N Kabcenell (Facebook)
+ \item Shilpa Lawande (Facebook, Inc.)
+  \item Hamza Qadeer (University of California, Berkeley)
+ \item Jason Chan (University of California, Berkeley)
+  \item Harrison Tin (University of California, Berkeley)
+ \item Ryan Zhao (University of California, Berkeley)
+\item Peter Bailis ()
+\item Mahesh Balakrishnan (Microsoft Research)
+\item Nathan Bronson (Rockset)
+\item Natacha Crooks (UC Berkeley)
+\item Ion Stoica (UC Berkeley)
+\end{itemize}
+\section{关键词}
+社交网络\hspace{2em}模拟请求\hspace{2em}工作负载配置
+\section{概述}
+为了更好的模拟社交网络应用中的生产请求模式，论文提出了新的一种基准——TAOBench，其通过meta公司的TAO数据存储来确定工作负载配置，并提供数据请求模拟。
+\section{研究的问题及其意义}
+生活中存在各种社交网络应用，但是缺少实际的、公开可用的查询请求的工具以指导社交网络应用的评估和改进。TAOBench填补了研究人员和开发人员在可用工具和数据方面的空白，为系统设计决策提供依据。
+\section{前序工作及其优缺点}
+以前也有这种工具，优点就是能够提供数据查询器请求；缺点也很明显，只能针对单一应用且请求单一，无法提供真实世界的多样化的请求。
+\section{论文提出的思路和方法，及其优缺点}
+\textbf{思路：}TAOBench记录真实世界的请求，将请求划分成三种操作类型，并将操作细化处理，然后进行数据分析，最后设置工作负载的参数。\\
+\textbf{优点:}TAOBench的通用性的方法可以应用在多个社交网络且能提供接近于现实世界的复杂请求。\\
+\textbf{缺点:}是锁的保持时间增加时写操作的错误率也会随之而增。
+\section{数据集和实验工具}
+数据库和数据集皆可公开且共享。\\
+\textbf{数据集：}Cloud Spanner, CockroachDB(CRDB), PlanetScale, TiDB, and YugabyteDB。\\
+\textbf{实验工具:}五个类似规模的托管云集群机器。
+\section{实验结果}
+随着请求数量的增加， 不同数据库的读写延迟速度都在增加，但是增加的速率各不相同，且对于同一数据库不同的工作负载其数据库表现也不相同。
+\section{我的思考}
+TAOBench通过划分对数据库的操作类型，并提出五个属性来优化TAOBench的请求模拟，使得其可以为不同的数据库提供多样化的真实请求。
+\end{document}

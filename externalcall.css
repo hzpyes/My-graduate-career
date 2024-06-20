@@ -66,7 +66,7 @@
     border: 1px solid #181818;
 }
 .input-box input:focus {
-    border-color: #181818;
+    border-color: #f56c6c;
 }
 .input-box input::placeholder {
     font-size: 16px;

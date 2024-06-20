@@ -1,0 +1,87 @@
+/* 鏂囨湰鐩稿叧 */
+.text-wrap {
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* flex甯冨眬 */
+.flexBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flexCenterX {
+    display: flex;
+    justify-content: center;
+}
+.flexCenterY {
+    display: flex;
+    align-items: center;
+}
+/* 鏂囧瓧甯冨眬 */
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.bold {
+    font-weight: bold;
+}
+.cursor {
+    cursor: pointer;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.containerMinHeight {
+    min-height: calc(-198vh);
+}
+.input-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.input-box input {
+    width: 772px;
+    height: 56px;
+    font-size: 16px;
+    color: #4A545D;
+    padding-left: 20px;
+    border: 1px solid transparent;
+    outline: 0;
+    background: #ffffff;
+    border: 1px solid #181818;
+}
+.input-box input:focus {
+    border-color: #ffffff;
+}
+.input-box input::placeholder {
+    font-size: 16px;
+    color: #CED0DB;
+}
+.input-box .btn {
+    width: 182px;
+    height: 56px;
+    background-color: #063156;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-box .btn img {
+    width: 28px;
+    height: 28px;
+}
